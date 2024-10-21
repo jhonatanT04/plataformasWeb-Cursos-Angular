@@ -27,7 +27,6 @@ export class AppComponent implements OnInit {
         this.geoLocationData = data;
         this.ciudad = this.geoLocationData.city;
         this.pais = this.geoLocationData.country_name;
-        console.log(this.geoLocationData);
       },
         error => { console.error('Error al obtener la geolocalización:', error); });
   }
