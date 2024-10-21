@@ -1,0 +1,139 @@
+section {
+    max-width: 1000px;
+    margin: 2rem auto;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.curso {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    transition: transform 0.8s ease, opacity 0.8s ease;
+    opacity: 1;
+    width: 300px;
+    text-align: center;
+    display: inline-block;
+    margin-right: 20px;
+    animation: aparecer 0.8s ease forwards;
+}
+
+
+
+@keyframes aparecer {
+    from {
+        transform: translateZ(-100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateZ(0);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+.curso h3 {
+    font-size: 1.5rem;
+    color: #007bff;
+    margin-bottom: 10px;
+    justify-items: center;
+}
+
+.curso p {
+    color: #666666;
+    font-size: 1rem;
+
+}
+
+.curso .bnt-descripcion {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.curso .bnt-descripcion:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+.curso .eliminar:hover,
+.curso .eliminar:focus {
+    box-shadow: inset 0 0 0 2em var(--hover);
+}
+
+.curso .eliminar {
+    --color: #ff0000;
+    --hover: #cc4f4f;
+}
+
+
+.curso .eliminar {
+    color: var(--color);
+    -webkit-transition: 1s;
+    transition: 1s;
+}
+
+.curso .eliminar:hover,
+.curso .eliminar:focus {
+    border-color: var(--hover);
+    color: #fff;
+}
+
+
+.curso .eliminar {
+    background: none;
+    border: 1px solid;
+    font: inherit;
+    padding: 4px;
+    border-radius: 7px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.mensaje-desaparecer {
+    transition: opacity 0.5s ease-in-out;
+}
+
+
+
+.detalles-curso {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #e0e0e0;
+    display: none;
+}
+
+
+
+.eliminando {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+
+
+
+#listaCursos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}

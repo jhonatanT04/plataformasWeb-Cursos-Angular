@@ -1,0 +1,34 @@
+<section id="agregarNuevoCurso">
+    <div class="form-container">
+        <h2>Agregar Nuevo Curso</h2>
+        <form id="nuevoCursoForm">
+            <div class="form-group">
+                <label for="nombreCurso">Nombre del Curso</label>
+                <input type="text" id="nombreCurso" name="nombreCurso" required placeholder="Programación"
+                    [(ngModel)]="nomCurso">
+            </div>
+            <div class="form-group">
+                <label for="nombreProfesor">Nombre del Profesor</label>
+                <input type="text" id="nombreProfesor" name="nombreProfesor" required placeholder="Jose Castro"
+                    [(ngModel)]="nomProfesor">
+            </div>
+            <div class="form-group">
+                <label for="fechaInicio">Fecha de Inicio</label>
+                <input type="date" id="fechaInicio" name="fechaInicio" required [(ngModel)]="fechaInicio">
+            </div>
+
+            <div class="form-group">
+                <label for="fechaFin">Fecha de Fin</label>
+                <input type="date" id="fechaFin" name="fechaFin" required [(ngModel)]="fechaFinal">
+            </div>
+            <div class="form-group" id="descripcionContainer">
+                <label for="descripcion">Descripción</label>
+                <textarea id="descripcion" name="descripcion" rows="4" required [(ngModel)]="descripcion"></textarea>
+            </div>
+            <button type="submit" class="btn-submit" id="bnt-subir"
+                (click)="saveCursos(nomCurso, nomProfesor, fechaInicio, fechaFinal, descripcion) ">Agregar
+                Curso</button>
+
+        </form>
+    </div>
+</section>

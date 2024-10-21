@@ -1,0 +1,27 @@
+#ciudad {
+    font: bold 90% monospace;
+    
+    width: 11rem;
+    top: 1rem;
+    right: 2rem;
+    font-size: 15px;
+    text-align: left;
+    background-color: rgb(31, 183, 155);
+    padding: 1rem;
+    border-radius: 12px;
+    color: black;
+    position: fixed;
+    animation: fadeOut 4s forwards;
+}
+
+@keyframes fadeOut {
+    75% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(400px);
+    }
+}

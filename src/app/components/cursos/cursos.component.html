@@ -1,0 +1,23 @@
+
+<section class="cuerpo" id="cursos">
+    <h2>Cursos Disponibles</h2>
+    <div id="listaCursos">
+        <div *ngFor="let curso of cursos;let i = index">
+            <div class="curso">
+                <div class="cursos-header">
+                    <h3>{{ curso.nomCurso }}</h3>
+                    <button class="eliminar" (click)="eliminarCurso(curso)">X</button>
+                </div>
+                <p>Profesor: {{ curso.nomProfesor }}</p>
+                <button class="bnt-descripcion" (click)="toggleDetalles(i)">Ver más</button>
+                
+                <div class="detalles-curso" [style.display]="mostrarDetalles[i] ? 'block' : 'none'">
+                    <p>Descripción: {{ curso.descripcion }}</p>
+                    <p>Duracion : {{curso.duracion}}</p>
+                    <p>Fecha de Inicio: {{ curso.fechaInicio | date:'dd/MM/yyyy' }}</p>
+                    <p>Fecha de Fin: {{ curso.fechaFinal | date:'dd/MM/yyyy' }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
